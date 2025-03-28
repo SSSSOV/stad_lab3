@@ -5,3 +5,4 @@ class Converter:
   def convert_length(self, value, from_unit, to_unit):
     if(from_unit == 'centimeters' and to_unit == 'inches'):
       return value / 2.54
+    else: return -1

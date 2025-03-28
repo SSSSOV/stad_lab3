@@ -14,6 +14,12 @@ class TestLengthConversion(unittest.TestCase):
     converter = Converter()
     result = converter.convert_length(10, 'centimeters', 'inches')
     self.assertAlmostEqual(result, 3.93701, 5, "Неточность в переводе 10 см в дюймы!")
+  
+  def test_centimeters_to_meters(self):
+    converter = Converter()
+    result = converter.convert_length(100, 'centimeters', 'meters')
+    self.assertAlmostEqual(result, 1, 5, "Неточность в переводе 100 см в м!")
+
 
 if __name__ == '__main__':
   unittest.main()
