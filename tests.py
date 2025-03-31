@@ -58,10 +58,10 @@ class TestLengthConversion(unittest.TestCase):
 
     # old-russian
     result = converter.convert_length(1, 'meters', 'arshins')
-    self.assertAlmostEqual(result, 1.406, 4, "Ошибка в переводе 1 meter в arshins!")
+    self.assertAlmostEqual(result, 1.406074, 4, "Ошибка в переводе 1 meter в arshins!")
 
     result = converter.convert_length(1, 'meters', 'fathoms')
-    self.assertAlmostEqual(result, 0.469, 4, "Ошибка в переводе 1 meter в fathoms!")
+    self.assertAlmostEqual(result, 0.46869141, 4, "Ошибка в переводе 1 meter в fathoms!")
 
     result = converter.convert_length(1, 'meters', 'versts')
     self.assertAlmostEqual(result, 0.00094, 4, "Ошибка в переводе 1 meter в versts!")
