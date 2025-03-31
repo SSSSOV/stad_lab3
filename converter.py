@@ -9,7 +9,7 @@ class Converter:
     'centimeters': 0.01,
     'meters': 1.0,
     'kilometers': 1000,
-    'millimeter': 0.001,
+    'millimeters': 0.001,
     # old-russian system
     'arshins': 0.7112,
     'fathoms': 2.1336,

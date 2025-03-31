@@ -37,7 +37,7 @@ class TestLengthConversion(unittest.TestCase):
     result = converter.convert_length(1, 'kilometers', 'meters')
     self.assertAlmostEqual(result, 1000, 4, "Ошибка в переводе 1 км в м!")
 
-    result = converter.convert_length(1, 'meters', 'millimeter')
+    result = converter.convert_length(1, 'meters', 'millimeters')
     self.assertAlmostEqual(result, 1000, 4, "Ошибка в переводе 1 км в м!")
 
   def test_length_units_of_other_systems(self):
