@@ -66,5 +66,34 @@ class TestLengthConversion(unittest.TestCase):
     result = converter.convert_length(1, 'meters', 'versts')
     self.assertAlmostEqual(result, 0.00094, 4, "Ошибка в переводе 1 meter в versts!")
 
+class TestTimeConversion(unittest.TestCase):
+  def test_time_conversion(self):
+    converter = Converter()
+
+    result = converter.convert_time(1, 'seconds', 'minutes')
+    self.assertAlmostEqual(result, 39.3701, 4, "Ошибка в переводе 1 meter в inch!")
+
+    result = converter.convert_time(1, 'seconds', 'hours')
+    self.assertAlmostEqual(result, 39.3701, 4, "Ошибка в переводе 1 meter в inch!")
+
+    result = converter.convert_time(1, 'seconds', 'days')
+    self.assertAlmostEqual(result, 39.3701, 4, "Ошибка в переводе 1 meter в inch!")
+
+    result = converter.convert_time(1, 'seconds', 'milliseconds')
+    self.assertAlmostEqual(result, 39.3701, 4, "Ошибка в переводе 1 meter в inch!")
+
+    result = converter.convert_time(1, 'seconds', 'microseconds')
+    self.assertAlmostEqual(result, 39.3701, 4, "Ошибка в переводе 1 meter в inch!")
+
+    result = converter.convert_time(1, 'seconds', 'weeks')
+    self.assertAlmostEqual(result, 39.3701, 4, "Ошибка в переводе 1 meter в inch!")
+
+    result = converter.convert_time(1, 'seconds', 'months')
+    self.assertAlmostEqual(result, 39.3701, 4, "Ошибка в переводе 1 meter в inch!")
+
+    result = converter.convert_time(1, 'seconds', 'years')
+    self.assertAlmostEqual(result, 39.3701, 4, "Ошибка в переводе 1 meter в inch!")
+
+
 if __name__ == '__main__':
   unittest.main()
