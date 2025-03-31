@@ -3,6 +3,8 @@ class Converter:
     'inches': 0.0254,
     'centimeters': 0.01,
     'meters': 1.0,
+    'kilometers': 1000,
+    'millimeter': 0.001
   }
 
   def __init__(self):

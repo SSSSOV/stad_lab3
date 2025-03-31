@@ -31,12 +31,12 @@ class TestLengthConversion(unittest.TestCase):
     result = converter.convert_length(1, 'inches', 'centimeters')
     self.assertAlmostEqual(result, 2.54, 4, "Неточность в переводе 1 дюйма в см!")
 
-  def test_other_units(self):
+  def test_other_length_units_of_IS(self):
     converter = Converter()
 
     result = converter.convert_length(1, 'kilometers', 'meters')
     self.assertAlmostEqual(result, 1000, 4, "Ошибка в переводе 1 км в м!")
-    
+
     result = converter.convert_length(1, 'meters', 'millimeter')
     self.assertAlmostEqual(result, 1000, 4, "Ошибка в переводе 1 км в м!")
 
