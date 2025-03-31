@@ -1,6 +1,11 @@
 class Converter:
   LENGTH_COEFFS = {
+    # american system
     'inches': 0.0254,
+    'foots':0.3048,
+    'yards':0.9144,
+    'miles':1609.34,
+    # international system
     'centimeters': 0.01,
     'meters': 1.0,
     'kilometers': 1000,

@@ -40,5 +40,31 @@ class TestLengthConversion(unittest.TestCase):
     result = converter.convert_length(1, 'meters', 'millimeter')
     self.assertAlmostEqual(result, 1000, 4, "Ошибка в переводе 1 км в м!")
 
+  def test_length_units_of_other_systems(self):
+    converter = Converter()
+
+    # american
+    result = converter.convert_length(1, 'meters', 'inches')
+    self.assertAlmostEqual(result, 39.3701, 4, "Ошибка в переводе 1 meter в inch!")
+
+    result = converter.convert_length(1, 'meters', 'foots')
+    self.assertAlmostEqual(result, 3.2808, 4, "Ошибка в переводе 1 meter в foot!")
+
+    result = converter.convert_length(1, 'meters', 'yards')
+    self.assertAlmostEqual(result, 1.0936, 4, "Ошибка в переводе 1 meter в yard!")
+
+    result = converter.convert_length(1, 'meters', 'miles')
+    self.assertAlmostEqual(result, 0.0006214, 4, "Ошибка в переводе 1 meter в mile!")
+
+    # old-russian
+    result = converter.convert_length(1, 'meters', 'arshins')
+    self.assertAlmostEqual(result, 1.406, 4, "Ошибка в переводе 1 meter в arshins!")
+
+    result = converter.convert_length(1, 'meters', 'fathoms')
+    self.assertAlmostEqual(result, 0.469, 4, "Ошибка в переводе 1 meter в fathoms!")
+
+    result = converter.convert_length(1, 'meters', 'versts')
+    self.assertAlmostEqual(result, 0.00094, 4, "Ошибка в переводе 1 meter в versts!")
+
 if __name__ == '__main__':
   unittest.main()
